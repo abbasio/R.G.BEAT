@@ -33,6 +33,7 @@ if key_shoot && shoot_delay < 0
 	shoot_delay = 5;
 	with instance_create_layer(x, y, "Bullet", obj_bullet)
 	{
+		image_index = obj_player.image_index;
 		speed = 25;
 		direction = other.image_angle;
 		image_angle = direction;

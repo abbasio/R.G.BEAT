@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_enemy_red",
-    "path": "sprites/spr_enemy_red/spr_enemy_red.yy",
+    "name": "sprNeon0",
+    "path": "sprites/sprNeon0/sprNeon0.yy",
   },
   "solid": false,
   "visible": true,
@@ -14,7 +14,7 @@
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
-  "physicsGroup": 1,
+  "physicsGroup": 0,
   "physicsDensity": 0.5,
   "physicsRestitution": 0.1,
   "physicsLinearDamping": 0.1,
@@ -24,16 +24,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemies",
-    "path": "folders/Objects/Enemies.yy",
+    "name": "Neon",
+    "path": "folders/Objects/Neon.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_enemy_red",
+  "name": "objNeonNo",
   "tags": [],
   "resourceType": "GMObject",
 }
