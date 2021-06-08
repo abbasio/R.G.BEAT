@@ -7,7 +7,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "objNeon",
+    "path": "objects/objNeon/objNeon.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
