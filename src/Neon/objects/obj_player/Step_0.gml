@@ -43,9 +43,10 @@ shoot_delay -= 1;
 
 if key_shoot && shoot_delay < 0
 {
-	shoot_delay = 5;
+	shoot_delay = 10;
 	with instance_create_layer(x, y, "Bullet", obj_bullet)
 	{
+		audio_play_sound(snd_shot, 3, false);
 		speed = 25;
 		direction = other.image_angle;
 		image_angle = direction;

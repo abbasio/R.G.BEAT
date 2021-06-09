@@ -1,10 +1,10 @@
-with(obj_bullet)
-if image_index = 0
+
+if other.image_index = 0
 {
-	instance_destroy(obj_enemy_red);
-	instance_destroy(obj_bullet);
+	instance_destroy(self); 
+	instance_destroy(other.id);
 }
 else
 {
-	instance_destroy(obj_bullet);
+	instance_destroy(other.id);
 }
