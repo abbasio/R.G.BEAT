@@ -1,5 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
-move_towards_point(obj_player.x, obj_player.y, 3);
+/// @desc Movement
 
-move_bounce_all(true)
+
+move_towards_point(obj_player.x, obj_player.y, 3); //Moves enemy objects towards player
+
+move_bounce_all(true) //Makes enemy objects bounce off everything
