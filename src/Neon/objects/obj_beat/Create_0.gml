@@ -1,8 +1,9 @@
+audio_play_sound(snd_neon, 10, true);
+
+
 width = display_get_gui_width(); //Establishes width of screen
 
 rhythm = 60; //Dictates speed at which bar reaches center. Higher value = slower beat
-
-global.beat = false; //Enables .beat actions when true
 
 buffer = 120; //Gives more room for player error on beat
 

@@ -1,6 +1,10 @@
 /// @desc Start Waves
 
 //---------WAVES
+if(!instance_exists(obj_beat))
+{
+	instance_create_layer(0, 0, "Enemies", obj_beat)
+}
 
 if (trigger = false)
 {

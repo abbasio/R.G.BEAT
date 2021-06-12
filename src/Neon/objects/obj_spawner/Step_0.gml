@@ -13,10 +13,7 @@ if (trigger)
 	}
 	
 	timer++; //Increases timer
-
-
-
-
+	
 if  (remaining[current_wave] <= 0)
 {
 	if (current_wave == total_waves)
