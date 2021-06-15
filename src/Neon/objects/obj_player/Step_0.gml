@@ -18,20 +18,23 @@ dash_duration -= 1;
 
 //---------BEAT
 
-//if global.beat = true
-//{
-	//audio_play_sound(snd_beat, 5, false);
-//}
+if global.beat = true
+{
+	audio_play_sound(snd_beat, 5, false);
+}
+
 
 //---------DASH
 
 if (key_dash) && global.beat = true
 {
-	dash_duration = 120;
+	dash_duration = 60;
 	if (dash_duration > 0)
 	{
+
 		x += hsp * dash_speed;
 		y += vsp * dash_speed;
+		
 	}
 }
 else
@@ -56,7 +59,7 @@ if key_shoot && shoot_delay < 0
 	shoot_delay = 15;
 	with instance_create_layer(x, y, "Bullet", obj_bullet)
 	{
-		audio_play_sound(snd_shot, 1, false);
+		audio_play_sound(snd_shot, 3, false);
 		speed = 25;
 		direction = other.image_angle;
 		image_angle = direction;

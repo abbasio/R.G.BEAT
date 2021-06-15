@@ -19,6 +19,8 @@ if  (remaining[current_wave] <= 0)
 	if (current_wave == total_waves)
 	{
 		instance_destroy();
+		room_goto_next();
+		if audio_is_playing(snd_neon) audio_stop_sound(snd_neon)
 	}
 	else
 	{

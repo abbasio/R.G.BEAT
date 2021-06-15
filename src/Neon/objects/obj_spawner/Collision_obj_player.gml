@@ -3,8 +3,20 @@
 //---------WAVES
 if(!instance_exists(obj_beat))
 {
-	instance_create_layer(0, 0, "Enemies", obj_beat)
+	if room = Room1
+	{
+		instance_create_layer(0, 0, "Enemies", obj_beat)
+	}
 }
+
+if(!instance_exists(obj_beat2))
+{
+	if room = Room2
+	{
+		instance_create_layer(0, 0, "Enemies", obj_beat2)
+	}
+}
+
 
 if (trigger = false)
 {

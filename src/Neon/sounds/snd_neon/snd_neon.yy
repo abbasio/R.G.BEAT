@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_neon.ogg",
-  "duration": 63.97967,
+  "duration": 100.041985,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
