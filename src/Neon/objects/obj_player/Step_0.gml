@@ -1,12 +1,25 @@
 //---------CONTROLS
 
-key_left = keyboard_check(ord("A"));
-key_right = keyboard_check(ord("D"));
-key_up = keyboard_check(ord("W"));
-key_down = keyboard_check(ord("S"));
-key_change = keyboard_check_pressed(vk_space);
-key_shoot = mouse_check_button(mb_left);
-key_dash = keyboard_check_pressed(vk_shift);
+if (hascontrol)
+{
+	key_left = keyboard_check(ord("A"));
+	key_right = keyboard_check(ord("D"));
+	key_up = keyboard_check(ord("W"));
+	key_down = keyboard_check(ord("S"));
+	key_change = keyboard_check_pressed(vk_space);
+	key_shoot = mouse_check_button(mb_left);
+	key_dash = keyboard_check_pressed(vk_shift);
+}
+else
+{
+	key_left = 0;
+	key_right = 0;
+	key_up = 0;
+	key_down = 0;
+	key_change = 0;
+	key_shoot = 0;
+	key_dash = 0;
+}
 
 //---------MOVEMENT
 
@@ -38,8 +51,12 @@ if (dash_duration > 0) //As long as the dash duration is greater than 0
 {
 	x += hsp * dash_speed;
 	y += vsp * dash_speed;
+	//hascontrol = false;
 }
-	
+//else
+//{
+	//hascontrol = true;
+//}
 //---------SHIFT
 
 if (key_change) && global.beat = true //If the change key is pressed while the beat is active
@@ -62,6 +79,24 @@ if key_shoot && shoot_delay < 0 //If the shoot key is pressed and there is no sh
 		image_angle = direction; //Sets the angle of the bullet's image equal to it's direction
 	}
 }
+
+//---------COLLISIONS
+
+if (place_meeting(x, y, obj_wall))
+{
+	hsp = 0; //Set horizontal speed to 0, once the player actually reaches the wall
+}
+
+
+//---------VERTICAL COLLISION
+
+//Same as the horizontal collision code, except for y values instead of the x values.
+
+if (place_meeting(x, y, obj_wall))//If the player is about to hit a wall, based on the current y position and the current vertical speed
+{
+	vsp = 0; //Set vertical speed to 0, once the player actually reaches the wall	
+}
+
 
 
 

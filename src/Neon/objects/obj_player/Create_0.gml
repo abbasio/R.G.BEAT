@@ -12,6 +12,8 @@ dash_duration = 0;
 
 shoot_delay = 0;
 
+hascontrol = true;
+
 window_set_cursor(cr_none);
 
 

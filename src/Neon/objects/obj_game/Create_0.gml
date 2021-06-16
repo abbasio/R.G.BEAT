@@ -5,7 +5,7 @@
 display_set_gui_size(RES_W, RES_H);
 
 
-global.level_score = 0;
+global.multiplier = 0;
 
 global.points = 0;
 
