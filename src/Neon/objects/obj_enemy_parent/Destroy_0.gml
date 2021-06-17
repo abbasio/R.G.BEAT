@@ -1,10 +1,15 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @desc Score and Wave Counter
+
 if (instance_exists(obj_player))
 {
-	global.points += 100;
-	global.level_score++;
-	with(obj_game) score_text_scale = 2;
+	global.points += 100 * global.multiplier;
+	global.multiplier++;
+	global.multiplier = min(global.multiplier, 5);
+	with(obj_game) 
+	{
+		score_text_scale = 2;
+		multi_text_scale = 3;
+	}
 }
 
 if (instance_exists(obj_spawner)) //Ticks down the spawner's current wave when an enemy dies
@@ -17,3 +22,5 @@ if (instance_exists(obj_spawner)) //Ticks down the spawner's current wave when a
 		}
 	}
 }
+
+audio_play_sound(snd_kill, 2, false);

@@ -10,9 +10,11 @@ dash_speed = 20;
 
 dash_duration = 0;
 
-shoot_delay = 0;
+shoot_delay = 15;
 
 hascontrol = true;
+
+alive = true;
 
 window_set_cursor(cr_none);
 

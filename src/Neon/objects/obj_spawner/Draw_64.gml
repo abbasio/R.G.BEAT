@@ -12,4 +12,4 @@
 	//}
 
 	//draw_text(25, 25, _str + "\nTotal Waves: " +string(total_waves) + "\nCurrent Wave: " +string (current_wave))
-//}
+//}a

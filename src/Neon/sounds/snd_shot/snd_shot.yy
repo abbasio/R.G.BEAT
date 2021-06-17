@@ -13,8 +13,8 @@
   "soundFile": "snd_shot.wav",
   "duration": 0.268741,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Effects",
+    "path": "folders/Sounds/Effects.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_shot",

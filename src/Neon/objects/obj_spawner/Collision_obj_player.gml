@@ -1,6 +1,9 @@
 /// @desc Start Waves
 
 //---------WAVES
+
+x = RES_W + 100
+
 if(!instance_exists(obj_beat))
 {
 	if room = Room1

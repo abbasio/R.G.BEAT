@@ -13,8 +13,8 @@
   "soundFile": "snd_neon.ogg",
   "duration": 100.041985,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Music",
+    "path": "folders/Sounds/Music.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_neon",

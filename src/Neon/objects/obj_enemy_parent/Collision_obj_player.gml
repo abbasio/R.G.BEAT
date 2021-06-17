@@ -1,3 +1,4 @@
+/// @desc Kill Player
 
 if (other.dash_duration > 0) && other.image_index = enemy_id
 {

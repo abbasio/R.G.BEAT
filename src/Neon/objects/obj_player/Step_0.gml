@@ -27,7 +27,6 @@ dash_duration = max(dash_duration - 1, 0);
 hsp = key_right - key_left;
 vsp = key_down - key_up;
 image_angle = point_direction(x, y, mouse_x, mouse_y);
-//dash_duration -= 1;
 
 x += hsp * move_speed;
 y += vsp * move_speed;
@@ -42,9 +41,21 @@ y += vsp * move_speed;
 
 //---------DASH
 
-if (key_dash) && global.beat = true //If the dash key is pressed while the beat is active
-{
-	dash_duration = 5; //Sets dash duration to 15 (reduces by 1 each frame)
+if (key_dash) //If the dash key is pressed 
+{ 
+	if global.beat //If the beat is active
+	{
+		dash_duration = 6; //Sets dash duration to 10 (reduces by 1 each frame)
+	}
+	else
+	{
+		audio_play_sound(snd_miss, 2, false);
+		global.multiplier = 1;
+		with(obj_game) 
+		{
+			multi_text_scale = 3;
+		}
+	}
 }
 
 if (dash_duration > 0) //As long as the dash duration is greater than 0
@@ -59,9 +70,20 @@ if (dash_duration > 0) //As long as the dash duration is greater than 0
 //}
 //---------SHIFT
 
-if (key_change) && global.beat = true //If the change key is pressed while the beat is active
-{
-	image_index += 1 //Change the player's color
+if (key_change)  //If the change key is pressed while the beat is active
+{	if (global.beat)
+	{
+		image_index += 1; //Change the player's color
+	}
+	else
+	{
+		audio_play_sound(snd_miss, 2, false);
+		global.multiplier = 1;
+		with(obj_game) 
+		{
+			multi_text_scale = 3;
+		}
+	}
 }
 
 //---------SHOOT
