@@ -1,5 +1,5 @@
 /// @desc Color Check
-if other.image_index = enemy_id
+if other.image_index = enemy_id || other.image_index = 3
 {
 	instance_destroy(self); 
 	instance_destroy(other.id);
