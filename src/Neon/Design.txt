@@ -1,0 +1,19 @@
+NEON
+•	60 BPM
+•	Pressing space on the beat changes color
+		R>G>B
+•	Shooting enemies of the same color kills them, shooting enemies of other colors does nothing
+•	Bumping into any enemies kills the player
+•	Pressing shift on the beat dashes
+•	Dashing through same color enemies kills them, dashing through different color enemies kills them
+•	Dash through powerups to use them
+		Powerups (5s each):
+			Infinite: Be able to hit any enemy regardless of color 
+			Unchained: Swap color and dash on command 
+			Double: Increases movespeed and shot frequency by 2x
+			Slow: Slows down enemy movement and beat 
+
+•	Kill enemies to increase score
+•	Combos up to 5x increases score multiplier
+•	Shooting a wrong color enemy cancels combo
+•	Missing a beat (trying to dash or change color if beat isn’t active) cancels combo

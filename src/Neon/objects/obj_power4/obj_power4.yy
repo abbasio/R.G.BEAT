@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_power1",
-    "path": "sprites/spr_power1/spr_power1.yy",
+    "name": "spr_power4",
+    "path": "sprites/spr_power4/spr_power4.yy",
   },
   "solid": false,
   "visible": true,
@@ -33,7 +33,7 @@
     "path": "folders/Objects/Powerups.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_power1",
+  "name": "obj_power4",
   "tags": [],
   "resourceType": "GMObject",
 }

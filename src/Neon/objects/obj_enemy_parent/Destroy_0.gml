@@ -4,7 +4,7 @@ if (instance_exists(obj_player))
 {
 	global.points += 100 * global.multiplier;
 	global.multiplier++;
-	global.multiplier = min(global.multiplier, 5);
+
 	with(obj_game) 
 	{
 		score_text_scale = 2;

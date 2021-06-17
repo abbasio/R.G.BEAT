@@ -7,7 +7,7 @@ if lbar_x >= (width/2) //Resets the left bar when it reaches center of screen
 	lbar_x = 0;
 }
 
-lbar_x += ((width/2) / rhythm) //Moves the left bar towards the center of screen
+lbar_x += ((width/2) / (rhythm * slow)) //Moves the left bar towards the center of screen
 
 //---------RIGHT BAR
 
@@ -18,4 +18,4 @@ if rbar_x <= (width/2) //Resets right bar when it reaches center of screen
 	rbar_x = 1920; 
 }
 
-rbar_x -= ((width/2) / rhythm) //Moves right bar towards center of screen
+rbar_x -= ((width/2) / (rhythm * slow)) //Moves right bar towards center of screen

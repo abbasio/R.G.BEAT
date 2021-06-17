@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "objNeon",
-    "path": "objects/objNeon/objNeon.yy",
+    "name": "obj_power_parent",
+    "path": "objects/obj_power_parent/obj_power_parent.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

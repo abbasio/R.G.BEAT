@@ -21,9 +21,27 @@ else
 	key_dash = 0;
 }
 
+switch (state)
+{
+	case states.normal:
+		StateNormal();
+		break;
+	case states.double:
+		StateDouble();
+		break;
+	case states.infinite:
+		StateInfinite();
+		break;
+	case states.slow:
+		StateSlow();
+		break;
+	case states.unchained:
+		StateUnchained();
+		break;
+}
+
 //---------MOVEMENT
 
-dash_duration = max(dash_duration - 1, 0);
 hsp = key_right - key_left;
 vsp = key_down - key_up;
 image_angle = point_direction(x, y, mouse_x, mouse_y);
@@ -31,15 +49,9 @@ image_angle = point_direction(x, y, mouse_x, mouse_y);
 x += hsp * move_speed;
 y += vsp * move_speed;
 
-//---------BEAT
-
-//if global.beat = true
-//{
-	//audio_play_sound(snd_beat, 5, false);
-//}
-
-
 //---------DASH
+
+dash_duration = max(dash_duration - 1, 0);
 
 if (key_dash) //If the dash key is pressed 
 { 
@@ -49,11 +61,14 @@ if (key_dash) //If the dash key is pressed
 	}
 	else
 	{
-		audio_play_sound(snd_miss, 2, false);
-		global.multiplier = 1;
-		with(obj_game) 
+		if instance_exists (obj_beat)
 		{
-			multi_text_scale = 3;
+			audio_play_sound(snd_miss, 2, false);
+			global.multiplier = 1;
+			with(obj_game) 
+			{
+				multi_text_scale = 3;
+			}
 		}
 	}
 }
@@ -62,19 +77,24 @@ if (dash_duration > 0) //As long as the dash duration is greater than 0
 {
 	x += hsp * dash_speed;
 	y += vsp * dash_speed;
-	//hascontrol = false;
 }
-//else
-//{
-	//hascontrol = true;
-//}
+
 //---------SHIFT
 
 if (key_change)  //If the change key is pressed while the beat is active
 {	if (global.beat)
 	{
-		image_index += 1; //Change the player's color
+		if image_index = 2
+		{
+			image_index = 0;
+		}
+		else
+		{
+			image_index += 1; //Change the player's color
+		}
+	
 	}
+	
 	else
 	{
 		audio_play_sound(snd_miss, 2, false);
@@ -102,22 +122,6 @@ if key_shoot && shoot_delay < 0 //If the shoot key is pressed and there is no sh
 	}
 }
 
-//---------COLLISIONS
-
-if (place_meeting(x, y, obj_wall))
-{
-	hsp = 0; //Set horizontal speed to 0, once the player actually reaches the wall
-}
-
-
-//---------VERTICAL COLLISION
-
-//Same as the horizontal collision code, except for y values instead of the x values.
-
-if (place_meeting(x, y, obj_wall))//If the player is about to hit a wall, based on the current y position and the current vertical speed
-{
-	vsp = 0; //Set vertical speed to 0, once the player actually reaches the wall	
-}
 
 
 

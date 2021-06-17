@@ -16,7 +16,17 @@ hascontrol = true;
 
 alive = true;
 
+state = states.normal;
+
 window_set_cursor(cr_none);
 
+enum states
+{
+	normal,
+	infinite,
+	double,
+	unchained,
+	slow
+}
 
 
