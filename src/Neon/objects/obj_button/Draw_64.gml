@@ -5,7 +5,7 @@ draw_set_color(merge_color(c_ltgrey, c_white, hover)); //Sets the color for the 
 #endregion
 
 #region//---------DRAW BUTTON
-draw_roundrect (x, y, x + button_width, y + button_height, 0); //Draws a round rectangle with the dimensions (button_width x button_height)
+draw_rectangle(x, y, x + button_width, y + button_height, 0); //Draws a round rectangle with the dimensions (button_width x button_height)
 #endregion
 
 #region//---------DRAW TEXT

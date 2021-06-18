@@ -1,0 +1,1 @@
+__glow_texture = spr_title_B

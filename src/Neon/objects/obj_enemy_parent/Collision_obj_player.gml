@@ -8,5 +8,5 @@ if (other.dash_duration > 0) && other.image_index = enemy_id
 }
 else
 {
-	instance_destroy(other);
+instance_destroy(other);
 }

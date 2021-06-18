@@ -6,8 +6,15 @@
 if (lbar_x >= ((width / 2) - buffer)) //Enables .beat actions when the bar reaches the center of screen
 {
 	global.beat = true;
+	pulse = 1.2
 }
 else
 {
 	global.beat = false;
+	pulse = 1
 }
+
+image_xscale = pulse;
+image_yscale = pulse;
+
+image_index = obj_player.image_index

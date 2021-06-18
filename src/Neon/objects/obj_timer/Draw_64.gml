@@ -3,7 +3,7 @@
 
 DrawSetText(c_white, f_score, fa_right, fa_top);
 
-draw_text(RES_W - 10, 40, string(power_time));
+draw_text(RES_W - 10, 40, "0" +string(power_time));
 
 var _width = RES_W
 
