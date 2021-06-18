@@ -44,6 +44,7 @@ switch (state)
 
 hsp = key_right - key_left;
 vsp = key_down - key_up;
+
 image_angle = point_direction(x, y, mouse_x, mouse_y);
 
 x += hsp * move_speed;
@@ -57,7 +58,7 @@ if (key_dash) //If the dash key is pressed
 { 
 	if global.beat //If the beat is active
 	{
-		dash_duration = 6; //Sets dash duration to 10 (reduces by 1 each frame)
+		dash_duration = 10; //Sets dash duration to 10 (reduces by 1 each frame)
 	}
 	else
 	{
@@ -73,7 +74,7 @@ if (key_dash) //If the dash key is pressed
 	}
 }
 
-if (dash_duration > 0) //As long as the dash duration is greater than 0
+if (dash_duration > 5) //As long as the dash duration is greater than 0
 {
 	x += hsp * dash_speed;
 	y += vsp * dash_speed;

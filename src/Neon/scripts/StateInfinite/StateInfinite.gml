@@ -7,6 +7,6 @@ image_index = 3;
 
 if (alarm[0] == -1)  //If the alarm is off
 {
-	alarm = (room_speed * 5); //Turn the alarm on, and set it to 5 seconds
+	alarm = (room_speed * 6); //Turn the alarm on, and set it to 5 seconds
 }
 }

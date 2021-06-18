@@ -2,12 +2,12 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function StateNormal(){
 
-if image_index = 3
+if image_index = 3 //Revert from infinite to normal
 {
 	image_index = 0;
 }
 
-if audio_sound_get_pitch(snd_neon) != 1
+if audio_sound_get_pitch(snd_neon) != 1 //Revert from slow to normal
 {
 	audio_sound_pitch(snd_neon, 1);
 }
@@ -18,6 +18,11 @@ if instance_exists(obj_beat)
 	{
 		obj_beat.rhythm = 60;
 	}
+}
+
+if move_speed !=5
+{
+	move_speed = 5;
 }
 
 }

@@ -3,6 +3,6 @@
 
 event_inherited();
 
-power_id = states.infinite;
+power_id = states.double;
 
-color = c_white;
+color = c_yellow;

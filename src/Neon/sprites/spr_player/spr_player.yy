@@ -17,8 +17,8 @@
   "width": 32,
   "height": 32,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "Player",
+    "path": "texturegroups/Player",
   },
   "swatchColours": null,
   "gridX": 0,

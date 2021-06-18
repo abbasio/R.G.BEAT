@@ -1,8 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-event_inherited();
+instance_create_layer(0, 0, "Powerups", obj_timer);
 
-power_id = states.infinite;
-
-color = c_white;
+obj_timer.col = color

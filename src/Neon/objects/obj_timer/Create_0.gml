@@ -1,8 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-event_inherited();
+power_time = 6.0
 
-power_id = states.infinite;
+bar_width = 0
 
-color = c_white;
+
+max_time = 6.0;
+
+col = c_white
