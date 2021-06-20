@@ -115,7 +115,6 @@
     {"folderPath":"folders/Sprites/Enemies.yy","order":1,"resourceVersion":"1.0","name":"Enemies","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Enemies.yy","order":0,"resourceVersion":"1.0","name":"Enemies","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Player.yy","order":1,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Objects/Neon.yy","order":2,"resourceVersion":"1.0","name":"Neon","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Shaders/Neon.yy","order":2,"resourceVersion":"1.0","name":"Neon","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Items.yy","order":3,"resourceVersion":"1.0","name":"Items","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Items.yy","order":2,"resourceVersion":"1.0","name":"Items","tags":[],"resourceType":"GMFolder",},

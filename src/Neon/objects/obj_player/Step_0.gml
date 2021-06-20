@@ -52,12 +52,8 @@ y += vsp * move_speed;
 
 //---------COLLISION
 
-if y > 920 y = 920;
-if y < 40 y = 40;
-
-if x > 1884 x = 1884
-if x < 40 x = 40
-
+x = clamp(x, 40, 1884);
+y = clamp(y, 40, 920);
 
 //---------DASH
 
