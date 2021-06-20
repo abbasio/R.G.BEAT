@@ -1,14 +1,14 @@
 /// @desc Draw Score
 
-if (room != Room0) 
+if (room = Room1) 
 {
 	if instance_exists(obj_player)
 	{
 		score_text_scale = max(score_text_scale * 0.95, 1);
 		multi_text_scale = max(multi_text_scale * 0.95, 1);
 		DrawSetText(c_white, f_score, fa_left, fa_top);
-		draw_text_transformed(RES_W - 1910, 20, string(global.points), score_text_scale, score_text_scale, 0);
-		draw_text_transformed(RES_W - 1910, 60, "X" + string(global.multiplier), multi_text_scale, multi_text_scale, 0);
+		draw_text_transformed(RES_W - 1900, 20, string(global.points), score_text_scale, score_text_scale, 0);
+		draw_text_transformed(RES_W - 1900, 60, "X" + string(global.multiplier), multi_text_scale, multi_text_scale, 0);
 		
 		if !instance_exists(obj_spawner)
 		{
@@ -25,12 +25,17 @@ if (room != Room0)
 		draw_set_color(c_black);
 		draw_set_alpha(0.3);
 		draw_rectangle(0, 0, RES_W, RES_H, false);
-		DrawSetText(c_white, f_score, fa_center, fa_center);
+		DrawSetText(c_white, f_score, fa_center, fa_bottom);
 		draw_set_alpha(1);
-		draw_text(RES_W / 2, RES_H / 2, "Game Over\nPress R to restart\n" + "Score: " + string(global.points));
+		draw_text(RES_W / 2, RES_H / 2, "Game Over\n" +"Score: " + string(global.points) + "\nPress R to restart");
 	}
 }
 
+if room = Room2
+{
+	DrawSetText(c_white, f_score, fa_center, fa_center)
+	draw_text(RES_W / 2, RES_H - 1030, "Welcome to RGBeat!");
+}
 	
 		
 

@@ -2,6 +2,12 @@
 
 if (trigger)
 {
+	
+	if text_alpha > 0
+	{
+		text_alpha -= 0.01;
+	}
+	
 	for (var i = 0; i < ds_list_size(waves); i++)
 	{
 		var _next = ds_list_find_value(waves, i)
@@ -25,7 +31,9 @@ if  (remaining[current_wave] <= 0)
 	else
 	{
 		current_wave++;
+		text_alpha = 1;
 		timer = 0;
 	}
 }
 }
+

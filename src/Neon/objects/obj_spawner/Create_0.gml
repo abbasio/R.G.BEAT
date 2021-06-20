@@ -7,6 +7,12 @@
 #macro _SPAWN 2
 #macro _DELAY 3
 
+
+text_alpha = 1;
 trigger = false;
 timer = 0;
 current_wave = 0;
+
+x = RES_W / 2;
+
+y = (RES_H / 2) - 100;

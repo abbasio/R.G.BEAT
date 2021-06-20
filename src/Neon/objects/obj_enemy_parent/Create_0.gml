@@ -1,0 +1,1 @@
+move_speed = obj_spawner.current_wave + 1 

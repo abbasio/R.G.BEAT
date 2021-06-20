@@ -2,7 +2,11 @@
 
 #macro RES_H 1080
 
+#macro TILE_SIZE 16
+
 display_set_gui_size(RES_W, RES_H);
+
+
 
 
 global.multiplier = 1;

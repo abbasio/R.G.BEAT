@@ -45,10 +45,19 @@ switch (state)
 hsp = key_right - key_left;
 vsp = key_down - key_up;
 
-image_angle = point_direction(x, y, mouse_x, mouse_y);
+angle = point_direction(x, y, obj_cursor.x, obj_cursor.y);
 
 x += hsp * move_speed;
 y += vsp * move_speed;
+
+//---------COLLISION
+
+if y > 920 y = 920;
+if y < 40 y = 40;
+
+if x > 1884 x = 1884
+if x < 40 x = 40
+
 
 //---------DASH
 
@@ -118,11 +127,10 @@ if key_shoot && shoot_delay < 0 //If the shoot key is pressed and there is no sh
 	{
 		audio_play_sound(snd_shot, 3, false); //Plays the shot sound
 		speed = 25; //Sets bullet speed to 25
-		direction = other.image_angle; //Sets the direction of the shot to be the direction of the player
+		direction = other.angle; //Sets the direction of the shot to be the direction of the player
 		image_angle = direction; //Sets the angle of the bullet's image equal to it's direction
 	}
 }
-
 
 
 

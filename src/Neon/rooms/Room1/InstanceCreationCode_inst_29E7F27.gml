@@ -2,38 +2,55 @@
 
 waves = ds_list_create();
 
-ds_list_add(waves, [0, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 0, 0]);
-ds_list_add(waves, [0, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 0, 50]);
-ds_list_add(waves, [0, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 0, 100]);
-ds_list_add(waves, [0, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 1, 0]);
-ds_list_add(waves, [0, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 1, 50]);
-ds_list_add(waves, [0, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 1, 100]);
+#region//---------WAVE 1
+ds_list_add(waves, [0, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), choose(0, 1), 60]);
+ds_list_add(waves, [0, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), choose (0, 1), 120]);
+ds_list_add(waves, [0, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), choose (2, 3), 180]);
+ds_list_add(waves, [0, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), choose(2, 3), 60]);
+ds_list_add(waves, [0, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), choose (2, 3), 120]);
+ds_list_add(waves, [0, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), choose (0, 1), 180]);
+#endregion
 
-ds_list_add(waves, [1, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 0, 0]);
-ds_list_add(waves, [1, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 0, 25]);
-ds_list_add(waves, [1, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 0, 50]);
-ds_list_add(waves, [1, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 1, 75]);
-ds_list_add(waves, [1, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 1, 100]);
-ds_list_add(waves, [1, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 1, 125]);
-ds_list_add(waves, [1, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 0, 150]);
-ds_list_add(waves, [1, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 1, 175]);
-ds_list_add(waves, [1, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 0, 200]);
+#region//---------WAVE 2
+ds_list_add(waves, [1, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), choose(0,1), 30]);
+ds_list_add(waves, [1, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), choose(2,3), 90]);
+ds_list_add(waves, [1, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), choose(0,1), 150]);
+ds_list_add(waves, [1, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), choose(2,3), 30]);
+ds_list_add(waves, [1, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), choose(0,1), 90]);
+ds_list_add(waves, [1, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), choose(2,3), 150]);
+ds_list_add(waves, [1, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 0, 210]);
+ds_list_add(waves, [1, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 1, 210]);
+ds_list_add(waves, [1, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 2, 210]);
+ds_list_add(waves, [1, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 3, 210]);
+#endregion
 
-ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 0, 25]);
-ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 0, 50]);
-ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 0, 75]);
-ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 0, 100]);
-ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 1, 125]);
+#region//---------WAVE 3
+ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 0, 30]);
+ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 1, 60]);
+ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 2, 90]);
+ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 3, 120]);
+ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 3, 30]);
+ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 2, 60]);
+ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 1, 90]);
+ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 0, 120]);
+ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 0, 150]);
 ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 1, 150]);
-ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 1, 175]);
-ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 1, 200]);
-ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 0, 225]);
-ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 1, 250]);
-ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 0, 275]);
-ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 1, 300]);
+ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 2, 150]);
+ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 3, 150]);
+//Powerups
+//ds_list_add(waves, [2, choose(obj_power1, obj_power2, obj_power3, obj_power4), choose (0, 1, 2, 3), choose (75, 105)]);
+#endregion
 
-spawn[0, 0] = 500
-spawn [0, 1] = 500
+#region//---------SPAWN POINTS
+spawn [0, 0] = 95
+spawn [0, 1] = 95
 
-spawn[1, 0] = 1420
-spawn[1, 1] = 500
+spawn [1, 0] = 1825
+spawn [1, 1] = 95
+
+spawn [2, 0] = 95
+spawn [2, 1] = 865
+
+spawn [3, 0] = 1825
+spawn [3, 1] = 865
+#endregion

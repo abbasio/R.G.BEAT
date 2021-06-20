@@ -8,7 +8,7 @@
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
-  "physicsGroup": 0,
+  "physicsGroup": 1,
   "physicsDensity": 0.5,
   "physicsRestitution": 0.1,
   "physicsLinearDamping": 0.1,
@@ -21,11 +21,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Neon",
-    "path": "folders/Objects/Neon.yy",
+    "name": "Title",
+    "path": "folders/Objects/Title.yy",
   },
   "resourceVersion": "1.0",
-  "name": "objNeon",
+  "name": "obj_title",
   "tags": [],
   "resourceType": "GMObject",
 }
