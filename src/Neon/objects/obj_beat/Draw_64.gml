@@ -1,6 +1,6 @@
 //---------LEFT BAR
 
-draw_sprite(spr_rhythm_bar, image_index, lbar_x, 1015); //Draws left bar
+draw_sprite(spr_rhythm_bar, image_index, lbar_x, obj_beat.y); //Draws left bar
 
 if lbar_x >= (width/2) //Resets the left bar when it reaches center of screen
 {
@@ -11,7 +11,7 @@ lbar_x += ((width/2) / (rhythm * slow)) //Moves the left bar towards the center 
 
 //---------RIGHT BAR
 
-draw_sprite(spr_rhythm_bar, image_index, rbar_x, 1015); //Draws right bar
+draw_sprite(spr_rhythm_bar, image_index, rbar_x, obj_beat.y); //Draws right bar
 
 if rbar_x <= (width/2) //Resets right bar when it reaches center of screen
 {

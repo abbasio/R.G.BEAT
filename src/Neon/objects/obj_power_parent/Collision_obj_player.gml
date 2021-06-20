@@ -6,3 +6,4 @@ if (other.dash_duration > 0)
 	instance_destroy();
 }
 
+

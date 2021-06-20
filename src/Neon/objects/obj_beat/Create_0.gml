@@ -1,4 +1,4 @@
-audio_play_sound(snd_neon, 10, true);
+if room = Room1 audio_play_sound(snd_neon, 10, true);
 
 
 width = RES_W; //Establishes width of screen

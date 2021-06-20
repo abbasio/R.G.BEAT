@@ -1,0 +1,1 @@
+instance_create_layer(MIDDLE, RES_H - 650, "Player", obj_beat);

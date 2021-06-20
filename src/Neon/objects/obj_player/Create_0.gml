@@ -1,5 +1,3 @@
-global.beat = false; //Enables .beat actions when true
-
 collision = layer_tilemap_get_id(layer_get_id("Collision"));
 
 hsp = 0;
@@ -20,7 +18,7 @@ alive = true;
 
 state = states.normal;
 
-x = RES_W / 2;
+x = MIDDLE;
 
 
 window_set_cursor(cr_none);

@@ -15,4 +15,4 @@ else
 image_xscale = lerp(image_xscale, pulse, 0.1)
 image_yscale = lerp (image_yscale, pulse, 0.1)
 
-image_index = obj_player.image_index
+if instance_exists(obj_player) image_index = obj_player.image_index

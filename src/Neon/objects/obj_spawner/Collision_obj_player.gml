@@ -6,7 +6,7 @@ x = RES_W + 100
 
 if !instance_exists(obj_beat) && room = Room1
 {
-	instance_create_layer(RES_W / 2, 1015, "Player", obj_beat)
+	instance_create_layer(MIDDLE, 1015, "Player", obj_beat)
 }
 
 

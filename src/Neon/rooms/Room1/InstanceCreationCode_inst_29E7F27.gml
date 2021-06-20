@@ -38,7 +38,7 @@ ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 1
 ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 2, 150]);
 ds_list_add(waves, [2, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), 3, 150]);
 //Powerups
-//ds_list_add(waves, [2, choose(obj_power1, obj_power2, obj_power3, obj_power4), choose (0, 1, 2, 3), choose (75, 105)]);
+ds_list_add(waves, [2, choose(obj_power1, obj_power2, obj_power3, obj_power4), choose (0, 1, 2, 3), choose (75, 105)]);
 #endregion
 
 #region//---------SPAWN POINTS

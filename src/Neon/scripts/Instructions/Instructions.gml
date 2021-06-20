@@ -3,6 +3,7 @@
 function Instructions(){
 
 instance_destroy(obj_mainmenu);
+instance_destroy(obj_instructions2);
 instance_destroy(obj_button);
 room_goto(Room2);
 
