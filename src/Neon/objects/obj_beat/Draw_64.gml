@@ -20,4 +20,6 @@ if rbar_x <= (width/2) //Resets right bar when it reaches center of screen
 
 rbar_x -= ((width/2) / (rhythm * slow)) //Moves right bar towards center of screen
 
+draw_self();
+
 

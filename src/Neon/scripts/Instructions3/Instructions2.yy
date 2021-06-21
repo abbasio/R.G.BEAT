@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Level Select",
+    "path": "folders/Scripts/Level Select.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Exit",
+  "name": "Instructions2",
   "tags": [],
   "resourceType": "GMScript",
 }

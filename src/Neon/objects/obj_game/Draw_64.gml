@@ -6,9 +6,9 @@ if (room = Room1)
 	{
 		score_text_scale = max(score_text_scale * 0.95, 1);
 		multi_text_scale = max(multi_text_scale * 0.95, 1);
-		DrawSetText(c_white, f_score, fa_left, fa_top);
-		draw_text_transformed(RES_W - 1900, 20, string(global.points), score_text_scale, score_text_scale, 0);
-		draw_text_transformed(RES_W - 1900, 60, "x" + string(global.multiplier), multi_text_scale, multi_text_scale, 0);
+		DrawSetText(c_white, f_score, fa_right, fa_bottom);
+		draw_text_transformed(RES_W - 20, 1020, string(global.points), score_text_scale, score_text_scale, 0);
+		draw_text_transformed(RES_W - 20, 1060, "x" + string(global.multiplier), multi_text_scale, multi_text_scale, 0);
 		
 		if !instance_exists(obj_spawner)
 		{
@@ -35,10 +35,10 @@ if (room = Room1)
 #region//--------DRAW INSTRUCTIONS
 if room = Room2
 {
-	DrawSetText(c_white, f_header, fa_center, fa_center)
+	DrawSetText(c_red, f_header, fa_center, fa_center)
 	draw_text(MIDDLE, RES_H - 1030, "Welcome to RGBeat!");
 	
-	draw_set_font(f_score);
+	DrawSetText(c_white, f_score, fa_center, fa_center);
 	
 	draw_text(MIDDLE, RES_H - 950, "This is you.");
 	draw_sprite(spr_player, 0, MIDDLE, RES_H - 850); 
@@ -88,7 +88,18 @@ if room = Room3
 	
 	draw_set_font(f_score);
 	
-	draw_text(MIDDLE, RES_H - 250, "Don't forget to dash through powerups - \nJust moving through them won't do anything");
-	
+	draw_text(MIDDLE, RES_H - 250, "Don't forget to dash through powerups - \nJust moving through them won't do anything!");
 	
 }
+
+if room = Room4
+{
+	draw_text(MIDDLE, RES_H - 950, "Your score is displayed in the bottom-right corner.\nEach kill increases your score.\nDash through same-colored enemies for double points!")
+	draw_text(MIDDLE, RES_H - 650, 	"Your combo increases each kill up to x5.\nMissing a beat or shooting the wrong\ncolor enemy resets your combo.\n" +
+									"Keep your combo up to maximize your score!")
+									
+	draw_text(MIDDLE, RES_H - 450, "Survive for as many waves as you can.")
+	draw_text(MIDDLE, RES_H - 250, "Good luck!");
+	
+}
+#endregion

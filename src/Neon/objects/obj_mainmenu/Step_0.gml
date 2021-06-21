@@ -8,6 +8,6 @@ CreateButton(button_x, button_y + 100, width, height, "INSTRUCTIONS", Instructio
 
 CreateButton(button_x, button_y + 200, width, height, "SCORES", ScoreBoard);
 
-CreateButton(button_x, button_y + 300, width, height, "EXIT", Exit);
+CreateButton(button_x, button_y + 300, width, height, "EXIT", game_end);
 
 #endregion

@@ -13,8 +13,11 @@ global.multiplier = 1;
 
 global.points = 0;
 
+global.name = "unknown";
+
 score_text_scale = 1;
 
 multi_text_scale = 1;
 
 demo_color = 0
+
