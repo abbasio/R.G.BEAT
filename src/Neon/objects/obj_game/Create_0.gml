@@ -7,17 +7,20 @@
 display_set_gui_size(RES_W, RES_H);
 
 
+
 global.beat = false;
 
 global.multiplier = 1;
 
 global.points = 0;
 
-global.name = "unknown";
+global.name = "";
 
 score_text_scale = 1;
 
 multi_text_scale = 1;
 
 demo_color = 0
+
+
 

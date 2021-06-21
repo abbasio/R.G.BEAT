@@ -45,7 +45,7 @@ switch (state)
 hsp = key_right - key_left;
 vsp = key_down - key_up;
 
-angle = point_direction(x, y, obj_cursor.x, obj_cursor.y);
+image_angle = point_direction(x, y, obj_cursor.x, obj_cursor.y);
 
 x += hsp * move_speed;
 y += vsp * move_speed;
@@ -123,7 +123,7 @@ if key_shoot && shoot_delay < 0 //If the shoot key is pressed and there is no sh
 	{
 		audio_play_sound(snd_shot, 3, false); //Plays the shot sound
 		speed = 25; //Sets bullet speed to 25
-		direction = other.angle; //Sets the direction of the shot to be the direction of the player
+		direction = other.image_angle; //Sets the direction of the shot to be the direction of the player
 		image_angle = direction; //Sets the angle of the bullet's image equal to it's direction
 	}
 }

@@ -23,3 +23,5 @@ rbar_x -= ((width/2) / (rhythm * slow)) //Moves right bar towards center of scre
 draw_self();
 
 
+
+

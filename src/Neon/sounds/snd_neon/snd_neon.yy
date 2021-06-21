@@ -1,5 +1,5 @@
 {
-  "compression": 0,
+  "compression": 2,
   "volume": 1.0,
   "preload": false,
   "bitRate": 128,
@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_neon.ogg",
-  "duration": 100.041985,
+  "duration": 228.0184,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

@@ -6,9 +6,6 @@ if room = Room1
 {
 	if !instance_exists(obj_spawner) || !instance_exists(obj_player)
 	{
-		
-		highscore_add(global.name, global.points);
-		global.points = 0;
-		room_goto(Room_Score);
+		msg = get_string_async("Enter name:", "");
 	}
 }

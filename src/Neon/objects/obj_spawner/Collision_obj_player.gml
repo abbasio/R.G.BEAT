@@ -2,7 +2,7 @@
 
 //---------WAVES
 
-x = RES_W + 100
+x = RES_W + 500
 
 if !instance_exists(obj_beat) && room = Room1
 {

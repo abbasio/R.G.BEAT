@@ -15,9 +15,11 @@ if (room = Room1)
 			draw_set_color(c_black);
 			draw_set_alpha(0.3);
 			draw_rectangle(0, 0, RES_W, RES_H, false);
-			DrawSetText(c_white, f_score, fa_center, fa_center);
 			draw_set_alpha(1);
-			draw_text(MIDDLE, RES_H / 2, "Complete!\nPress R to restart\nPress Q to quit\n" + "Score: " + string(global.points));
+			DrawSetText(c_green, f_header, fa_center, fa_center)
+			draw_text(MIDDLE, RES_H * 0.10, "Complete!\nFinal Score: " + string(global.points));
+			DrawSetText(c_white, f_score, fa_center, fa_center);
+			draw_text(MIDDLE, RES_H / 2, "Press Enter to save score\nPress R to restart\nPress Q to quit");
 		}
 	}
 	else
@@ -25,9 +27,11 @@ if (room = Room1)
 		draw_set_color(c_black);
 		draw_set_alpha(0.3);
 		draw_rectangle(0, 0, RES_W, RES_H, false);
-		DrawSetText(c_white, f_score, fa_center, fa_bottom);
 		draw_set_alpha(1);
-		draw_text(MIDDLE, RES_H / 2, "Game Over\n" +"Score: " + string(global.points) + "\nPress R to restart\nPress Q to quit");
+		DrawSetText(c_red, f_header, fa_center, fa_center)
+		draw_text(MIDDLE, RES_H * 0.10, "GAME OVER\nFinal Score: " + string(global.points));
+		DrawSetText(c_white, f_score, fa_center, fa_bottom);
+		draw_text(MIDDLE, RES_H / 2, "Press Enter to save score\nPress R to restart\nPress Q to quit");
 	}
 }
 #endregion
@@ -36,7 +40,7 @@ if (room = Room1)
 if room = Room2
 {
 	DrawSetText(c_red, f_header, fa_center, fa_center)
-	draw_text(MIDDLE, RES_H - 1030, "Welcome to RGBeat!");
+	draw_text(MIDDLE, RES_H - 1030, "Welcome to R.G.Beat!");
 	
 	DrawSetText(c_white, f_score, fa_center, fa_center);
 	
@@ -66,6 +70,7 @@ if room = Room3
 	 "or you can dash through powerups to pick them up!");
 	 
 	draw_set_font(f_header);
+	draw_set_color(c_red);
 	draw_text(MIDDLE, RES_H - 750, "POWERUPS:");
 	
 	draw_sprite_ext(spr_power1, image_index, 384, RES_H - 650, 2, 2, 0, c_white, 1);
@@ -80,6 +85,7 @@ if room = Room3
 	draw_text(1536, RES_H - 550,"SLOW");
 	
 	draw_set_font(f_desc);
+	draw_set_color(c_white);
 	
 	draw_text(384, RES_H - 450,"Become Infinite!\nDestroy enemies\n of any color");
 	draw_text(768, RES_H - 450,"Speed it up!\nMove twice as fast");
@@ -97,8 +103,8 @@ if room = Room4
 	draw_text(MIDDLE, RES_H - 950, "Your score is displayed in the bottom-right corner.\nEach kill increases your score.\nDash through same-colored enemies for double points!")
 	draw_text(MIDDLE, RES_H - 650, 	"Your combo increases each kill up to x5.\nMissing a beat or shooting the wrong\ncolor enemy resets your combo.\n" +
 									"Keep your combo up to maximize your score!")
-									
-	draw_text(MIDDLE, RES_H - 450, "Survive for as many waves as you can.")
+	draw_set_color(c_red);								
+	draw_text(MIDDLE, RES_H - 450, "There are 10 Waves.\nSurvive for as many as you can.")
 	draw_text(MIDDLE, RES_H - 250, "Good luck!");
 	
 }

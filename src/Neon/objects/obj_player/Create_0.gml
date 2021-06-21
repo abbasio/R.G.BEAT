@@ -1,10 +1,15 @@
-collision = layer_tilemap_get_id(layer_get_id("Collision"));
+event_inherited();
+
+uOuterIntensity = 1.5;
+uInnerIntensity = 15;
+uInnerLengthMultiplier = 50;
+
 
 hsp = 0;
 
 vsp = 0;
 
-move_speed = 5;
+move_speed = 6;
 
 dash_speed = 20;
 
@@ -19,9 +24,6 @@ alive = true;
 state = states.normal;
 
 x = MIDDLE;
-
-
-window_set_cursor(cr_none);
 
 enum states
 {
