@@ -1,4 +1,4 @@
-# Neon
+# R.G.Beat
 
 Submission for the Amaze Me GMS2 Jam
 
