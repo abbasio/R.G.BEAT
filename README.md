@@ -1,4 +1,4 @@
-# R.G.Beat
+# R.G.BEAT
 
 Submission for the Amaze Me GMS2 Jam
 
