@@ -2,19 +2,19 @@
 // You can write your code in this editor
 event_inherited();
 
-if (lbar_x >= ((width / 2) - buffer)) //Enables .beat actions when the bar reaches the center of screen
+if (lbar_x >= ((width / 2) - buffer)) //When the left bar reaches the center of the screen, minus a buffer amount	
 {
-	global.beat = true;
-	pulse = 1.5
+	global.beat = true; //Sets the beat to true - enables .beat functions, like dashing or switching colors
+	pulse = 1.5 //Sets the image scale up to 1.5 for a pulse effect on each beat 
 }
-else
+else //When the bar is not between the buffer zone and the center of the screen
 {
-	global.beat = false;
-	pulse = 1
+	global.beat = false; //Disables .beat functions
+	pulse = 1 //Sets the image scale down to 1 for a pulse effect on each beat 
 }
 
-image_xscale = lerp(image_xscale, pulse, 0.1)
+image_xscale = lerp(image_xscale, pulse, 0.1) //Smoothly moves the image scale up and down on each beat, as per pulse
 image_yscale = lerp (image_yscale, pulse, 0.1)
 
-if instance_exists(obj_player) image_index = obj_player.image_index
+if instance_exists(obj_player) image_index = obj_player.image_index //Sets the color of the beat object equal to the color of the player object
 

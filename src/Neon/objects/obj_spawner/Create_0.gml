@@ -1,7 +1,5 @@
 /// @desc Setup
 
-
-
 #macro _WAVE 0
 #macro _TYPE 1
 #macro _SPAWN 2
