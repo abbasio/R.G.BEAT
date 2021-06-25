@@ -6,5 +6,7 @@ Rhythm based top-down shooter
 
 Source code and documentation is primarily in .gml files under src>Neon>objects
 
-Check it out [here!](https://abbas-io.itch.io/rgbeat)
+For example, the documentation for the player object is located [here](https://github.com/Om-Abb/Neon/blob/main/src/Neon/objects/obj_player/Step_0.gml)
+
+Check out the final project on [itch.io!](https://abbas-io.itch.io/rgbeat)
 
