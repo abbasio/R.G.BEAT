@@ -2,7 +2,11 @@
 // You can write your code in this editor
 event_inherited();
 
-if (lbar_x >= ((width / 2) - buffer)) //When the left bar reaches the center of the screen, minus a buffer amount	
+lbar_time = lbar_time + delta_time / 1000000; //Ties the left bar position to time - increases every second
+
+rbar_time = rbar_time - delta_time / 1000000; //Ties the right bar position to time - decreases every second
+
+if (lbar_x >= (width - buffer)) //When the left bar reaches the center of the screen, minus a buffer amount	
 {
 	global.beat = true; //Sets the beat to true - enables .beat functions, like dashing or switching colors
 	pulse = 1.5 //Sets the image scale up to 1.5 for a pulse effect on each beat 

@@ -1,43 +1,44 @@
 /// @desc Draw Stuff
 #region//---------DRAW SCORE
-if (room = Room1) 
+if (room = Room1) //If the current room is the main room
 {
-	if instance_exists(obj_player) 
+	if instance_exists(obj_player) //If a player object exists  
 	{
-		score_text_scale = max(score_text_scale * 0.95, 1);
-		multi_text_scale = max(multi_text_scale * 0.95, 1);
-		DrawSetText(c_white, f_score, fa_right, fa_bottom);
-		draw_text_transformed(RES_W - 20, 1020, string(global.points), score_text_scale, score_text_scale, 0);
-		draw_text_transformed(RES_W - 20, 1060, "x" + string(global.multiplier), multi_text_scale, multi_text_scale, 0);
+		score_text_scale = max(score_text_scale * 0.95, 1); //Constantly scales the score text scale down towards 1
+		multi_text_scale = max(multi_text_scale * 0.95, 1); //Constantly scales the combo multiplier text scale down towards 1 
+		DrawSetText(c_white, f_score, fa_right, fa_bottom); //Sets the text to be white, score font, aligned horizontally right and vertically bottom
+		draw_text_transformed(RES_W - 20, 1020, string(global.points), score_text_scale, score_text_scale, 0); //Draws the player's current score at the bottom-right of the screen
+		draw_text_transformed(RES_W - 20, 1060, "x" + string(global.multiplier), multi_text_scale, multi_text_scale, 0); //Draws the player's current combo multiplier at the bottom-right of the screen
 		
-		if !instance_exists(obj_spawner)
+		if !instance_exists(obj_spawner) //If there is no spawner object (ie. Final wave completed)
 		{
-			draw_set_color(c_black);
-			draw_set_alpha(0.3);
-			draw_rectangle(0, 0, RES_W, RES_H, false);
-			draw_set_alpha(1);
-			DrawSetText(c_green, f_header, fa_center, fa_center)
-			draw_text(MIDDLE, RES_H * 0.10, "Complete!\nFinal Score: " + string(global.points));
-			DrawSetText(c_white, f_score, fa_center, fa_center);
-			draw_text(MIDDLE, RES_H / 2, "Press Enter to save score\nPress R to restart\nPress Q to quit");
+			draw_set_color(c_black); 
+			draw_set_alpha(0.3); 
+			draw_rectangle(0, 0, RES_W, RES_H, false); //Draws a transparent black rectangle over the screen
+			draw_set_alpha(1); //Reset the alpha (transparency)
+			DrawSetText(c_green, f_header, fa_center, fa_center) //Sets the text to be green, header font, aligned horizontally and vertically center
+			draw_text(MIDDLE, RES_H * 0.10, "Complete!\nFinal Score: " + string(global.points)); //Shows the players' final score 
+			DrawSetText(c_white, f_score, fa_center, fa_center); //Sets the text to be white, score font, aligned horizontally and vertically center
+			draw_text(MIDDLE, RES_H / 2, "Press Enter to save score\nPress R to restart\nPress Q to quit"); //Displays instructions for continue/restart/quit
 		}
 	}
-	else
+	else //If a player object does not exist (ie. player has died)
 	{
 		draw_set_color(c_black);
 		draw_set_alpha(0.3);
-		draw_rectangle(0, 0, RES_W, RES_H, false);
-		draw_set_alpha(1);
-		DrawSetText(c_red, f_header, fa_center, fa_center)
-		draw_text(MIDDLE, RES_H * 0.10, "GAME OVER\nFinal Score: " + string(global.points));
-		DrawSetText(c_white, f_score, fa_center, fa_bottom);
-		draw_text(MIDDLE, RES_H / 2, "Press Enter to save score\nPress R to restart\nPress Q to quit");
+		draw_rectangle(0, 0, RES_W, RES_H, false); //Draws a transparent black rectangle over the screen
+		draw_set_alpha(1); //Reset the alpha (transparency)
+		DrawSetText(c_red, f_header, fa_center, fa_center) //Sets the text to be red, header font, aligned horizontally and vertically center 
+		draw_text(MIDDLE, RES_H * 0.10, "GAME OVER\nFinal Score: " + string(global.points)); //Shows the players' final score 
+		DrawSetText(c_white, f_score, fa_center, fa_bottom); //Sets the text to be white, score font, aligned horizontally and vertically center
+		draw_text(MIDDLE, RES_H / 2, "Press Enter to save score\nPress R to restart\nPress Q to quit"); //Displays instructions for continue/restart/quit
 	}
 }
 #endregion
 
 #region//--------DRAW INSTRUCTIONS
-if room = Room2
+
+if room = Room2 //If the current room is the first instructions page
 {
 	DrawSetText(c_red, f_header, fa_center, fa_center)
 	draw_text(MIDDLE, RES_H - 1030, "Welcome to R.G.Beat!");
@@ -45,13 +46,14 @@ if room = Room2
 	DrawSetText(c_white, f_score, fa_center, fa_center);
 	
 	draw_text(MIDDLE, RES_H - 950, "This is you.");
-	draw_sprite(spr_player, 0, MIDDLE, RES_H - 850); 
+	draw_sprite(spr_player, 0, MIDDLE, RES_H - 850); //Draws the player on the instructions page as a static red color 
 	
-	draw_text(MIDDLE, RES_H - 750, "This is the beat marker!");
+	draw_text(MIDDLE, RES_H - 750, "This is the beat marker!"); 
+	//Note: See the Room2 Creation Code for where the beat object is drawn
 	
 	draw_text(MIDDLE, RES_H - 550, "Press SPACE to the beat to change color!");
 	
-	draw_sprite(spr_player, demo_color, MIDDLE, RES_H - 450);
+	draw_sprite(spr_player, demo_color, MIDDLE, RES_H - 450); //Draws the player on the instructions page, cycling through the colors on a beat 
 	
 	draw_text(MIDDLE, RES_H - 350, "Use your mouse to aim and shoot");
 	draw_text(MIDDLE, RES_H - 250, "Match your color to the enemy and\n shoot them to destroy them!");
@@ -62,7 +64,7 @@ if room = Room2
 	
 }
 
-if room = Room3
+if room = Room3 //If the current room is the second instructions page 
 {
 	DrawSetText(c_white, f_score, fa_center, fa_center)
 	draw_text(MIDDLE, RES_H - 950, "Press SHIFT on the beat to dash\n" + 
@@ -98,7 +100,7 @@ if room = Room3
 	
 }
 
-if room = Room4
+if room = Room4 //If the current room is the third instructions page 
 {
 	draw_text(MIDDLE, RES_H - 950, "Your score is displayed in the bottom-right corner.\nEach kill increases your score.\nDash through same-colored enemies for double points!")
 	draw_text(MIDDLE, RES_H - 650, 	"Your combo increases each kill up to x5.\nMissing a beat or shooting the wrong\ncolor enemy resets your combo.\n" +

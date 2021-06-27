@@ -2,14 +2,17 @@ event_inherited(); //Inherits the parent event, if applicable
 
 if room = Room1 audio_play_sound(snd_neon, 10, true); //Plays the music 
 
-width = RES_W; //Establishes width of screen
+width = MIDDLE; //Establishes width of screen
 
-if room = Room1 rhythm = 60 //Dictates speed at which bar reaches center. Higher value = slower beat
-else rhythm = 45; //Sets the rhythm to be faster for the instructions page
+beat_time = 1; //Establishes tempo: 1 = 60BPM, 0.5 = 120BPM
+
+lbar_time = 0; //Defines horizontal movement for left bar
+
+rbar_time = 1; //Defines horizontal movement for right bar - should be equal to beat_time
 
 slow = 1 //Multiplier for the 'slow' effect
 
-buffer = 180; //Gives more room for player error on beat
+buffer = 150; //Gives more room for player error on beat
 
 lbar_x = 0; //Sets origin of left bar at the far left of screen	
 
