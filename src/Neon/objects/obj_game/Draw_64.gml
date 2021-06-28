@@ -20,6 +20,7 @@ if (room = Room1) //If the current room is the main room
 			draw_text(MIDDLE, RES_H * 0.10, "Complete!\nFinal Score: " + string(global.points)); //Shows the players' final score 
 			DrawSetText(c_white, f_score, fa_center, fa_center); //Sets the text to be white, score font, aligned horizontally and vertically center
 			draw_text(MIDDLE, RES_H / 2, "Press Enter to save score\nPress R to restart\nPress Q to quit"); //Displays instructions for continue/restart/quit
+			window_set_cursor(cr_default);
 		}
 	}
 	else //If a player object does not exist (ie. player has died)
@@ -32,6 +33,7 @@ if (room = Room1) //If the current room is the main room
 		draw_text(MIDDLE, RES_H * 0.10, "GAME OVER\nFinal Score: " + string(global.points)); //Shows the players' final score 
 		DrawSetText(c_white, f_score, fa_center, fa_bottom); //Sets the text to be white, score font, aligned horizontally and vertically center
 		draw_text(MIDDLE, RES_H / 2, "Press Enter to save score\nPress R to restart\nPress Q to quit"); //Displays instructions for continue/restart/quit
+		window_set_cursor(cr_default);
 	}
 }
 #endregion

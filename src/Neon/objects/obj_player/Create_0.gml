@@ -12,8 +12,6 @@ dash_duration = 0; //Sets a variable for the duration of the player's dash
 
 shoot_delay = 15; //Sets a variable for the delay between shots
 
-hascontrol = true; //Sets a variable for whether the player has control or not
-
 alive = true; //Sets a variable for whether the player is alive or not
 
 state = states.normal; //Sets the player's state to normal

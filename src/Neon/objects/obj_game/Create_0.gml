@@ -16,11 +16,18 @@ global.points = 0; //Sets a global variable for the score
 
 global.name = ""; //Sets a global variable for the player's name 
 
+gameover = false;
+
+gamewin = false;
+
 score_text_scale = 1; //Sets a variable for the scale of the score text
 
 multi_text_scale = 1; //Sets a variable for the scale of the combo multiplier text 
 
-demo_color = 0 //Sets a variable for the color of objects drawn in the instructions 
+demo_color = 0; //Sets a variable for the color of objects drawn in the instructions 
+
+controller = false;
+
 
 
 

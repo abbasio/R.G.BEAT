@@ -5,4 +5,3 @@ CreateButton(RES_W - width, button_y, width, height, "Main Menu", Menu); //Creat
 
 CreateButton(button_x, button_y, width, height, "Clear Scores", highscore_clear); //Creates a "Clear Scores" button at the bottom left of the screen
 
-

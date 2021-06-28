@@ -8,8 +8,6 @@ beat_time = 1; //Establishes tempo: 1 = 60BPM, 0.5 = 120BPM
 
 lbar_time = 0; //Defines horizontal movement for left bar
 
-rbar_time = 1; //Defines horizontal movement for right bar - should be equal to beat_time
-
 slow = 1 //Multiplier for the 'slow' effect
 
 buffer = 150; //Gives more room for player error on beat

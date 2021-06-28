@@ -4,8 +4,6 @@ event_inherited();
 
 lbar_time = lbar_time + delta_time / 1000000; //Ties the left bar position to time - increases every second
 
-rbar_time = rbar_time - delta_time / 1000000; //Ties the right bar position to time - decreases every second
-
 if (lbar_x >= (width - buffer)) //When the left bar reaches the center of the screen, minus a buffer amount	
 {
 	global.beat = true; //Sets the beat to true - enables .beat functions, like dashing or switching colors
@@ -16,6 +14,8 @@ else //When the bar is not between the buffer zone and the center of the screen
 	global.beat = false; //Disables .beat functions
 	pulse = 1 //Sets the image scale down to 1 for a pulse effect on each beat 
 }
+
+
 
 image_xscale = lerp(image_xscale, pulse, 0.1) //Smoothly moves the image scale up and down on each beat, as per pulse
 image_yscale = lerp (image_yscale, pulse, 0.1)

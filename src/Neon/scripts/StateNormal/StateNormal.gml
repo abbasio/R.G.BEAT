@@ -12,6 +12,14 @@ if audio_sound_get_pitch(snd_neon) != 1 //Revert from slow to normal
 	audio_sound_pitch(snd_neon, 1);
 }
 
+if instance_exists(obj_beat)
+{
+	if obj_beat.beat_time != 1
+	{
+		obj_beat.beat_time = 1;	
+	}
+}
+
 
 if move_speed !=5
 {
