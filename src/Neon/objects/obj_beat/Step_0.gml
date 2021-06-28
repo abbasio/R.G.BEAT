@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+
 event_inherited();
 
 lbar_time = lbar_time + delta_time / 1000000; //Ties the left bar position to time - increases every second

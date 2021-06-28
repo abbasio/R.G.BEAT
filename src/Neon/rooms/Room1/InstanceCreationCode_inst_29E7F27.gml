@@ -3,8 +3,8 @@
 waves = ds_list_create();
 
 #region//---------WAVE 1
-//ds_list_add(waves, [0, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), choose(0, 1), 60]);
-ds_list_add(waves, [0, obj_power4, 0, 60]);
+ds_list_add(waves, [0, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), choose(0, 1), 60]);
+//ds_list_add(waves, [0, obj_power4, 0, 60]);
 ds_list_add(waves, [0, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), choose (0, 1), 120]);
 ds_list_add(waves, [0, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), choose (2, 3), 180]);
 ds_list_add(waves, [0, choose(obj_enemy_red, obj_enemy_green, obj_enemy_blue), choose(2, 3), 60]);
