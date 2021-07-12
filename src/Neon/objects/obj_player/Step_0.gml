@@ -1,13 +1,24 @@
 //---------CONTROLS
-
-key_left = keyboard_check(ord("A")); //Sets the left key to "A"
-key_right = keyboard_check(ord("D")); //Sets the right key to "D"
-key_up = keyboard_check(ord("W")); //Sets the up key to "W"
-key_down = keyboard_check(ord("S")); //Sets the down key to "S"
-key_change = keyboard_check_pressed(vk_space); //Sets the color change key to spacebar
-key_shoot = mouse_check_button(mb_left); //Sets the shoot key to the left mouse button
-key_dash = keyboard_check_pressed(vk_shift); //Sets the dash key to the shift button
-
+if obj_game.controller = false
+{
+	key_left = keyboard_check(ord("A")); //Sets the left key to "A"
+	key_right = keyboard_check(ord("D")); //Sets the right key to "D"
+	key_up = keyboard_check(ord("W")); //Sets the up key to "W"
+	key_down = keyboard_check(ord("S")); //Sets the down key to "S"
+	key_change = keyboard_check_pressed(vk_space); //Sets the color change key to spacebar
+	key_shoot = mouse_check_button(mb_left); //Sets the shoot key to the left mouse button
+	key_dash = keyboard_check_pressed(vk_shift); //Sets the dash key to the shift button
+}
+else
+{
+	key_left = abs(min(gamepad_axis_value(0, gp_axislh), 0));
+	key_right = max(gamepad_axis_value(0, gp_axislh), 0);
+	key_up = abs(min(gamepad_axis_value(0, gp_axislv), 0));
+	key_down = max(gamepad_axis_value(0, gp_axislv), 0);
+	key_change = gamepad_button_check_pressed(0, gp_shoulderr);
+	key_shoot = gamepad_button_check(0, gp_shoulderrb);
+	key_dash = gamepad_button_check_pressed(0, gp_shoulderl);
+}
 
 //---------STATES
 

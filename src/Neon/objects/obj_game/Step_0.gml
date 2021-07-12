@@ -16,3 +16,9 @@ if room = Room2
 	if demo_color = 3 demo_color = 0;
 }
 
+if gamepad_is_connected(0)
+{
+	controller = true;
+	gamepad_set_axis_deadzone(0, 0.2);
+}
+else controller = false;

@@ -2,7 +2,14 @@
 
 #region//---------VARIABLES
 var _hover = CheckHover(); //Variable for if the mouse is over a button - see Scripts>CheckHover
-var _click = _hover && mouse_check_button_pressed(mb_left); //Variable for if the mouse is over button, and left mouse is clicked
+if !obj_game.controller
+{
+	var _click = _hover && mouse_check_button_pressed(mb_left); //Variable for if the mouse is over button, and left mouse is clicked
+}
+else
+{
+	var _click = _hover && gamepad_button_check_pressed(0, gp_face1);
+}
 #endregion
 
 #region//---------BUTTON ANIMATION
