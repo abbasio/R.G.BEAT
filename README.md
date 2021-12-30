@@ -1,5 +1,8 @@
 # R.G.BEAT
 
+[Gameplay Video](https://www.youtube.com/watch?v=75lxo-Jpuqw)
+
+
 Submission for the Amaze Me GMS2 Jam
 
 Rhythm based top-down shooter
